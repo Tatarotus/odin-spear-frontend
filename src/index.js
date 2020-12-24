@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks';
 
 import Login from './components/Login';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/dashboard';
 import SignUp from './components/SignUp';
 import './style';
 
@@ -12,16 +12,17 @@ function App() {
 	function handleDisplay(val) {
 		setDisplay(val);
 	}
-	switch (display) {
-		case 'login':
-			return <Login display={handleDisplay} />;
-		case 'dashboard':
-			return <Dashboard display={handleDisplay} />;
-		case 'signup':
-			return <SignUp display={handleDisplay} />;
-		default:
-			return <Login display={handleDisplay} />;
-	}
+	// switch (display) {
+	// 	case 'login':
+	// 		return <Login display={handleDisplay} />;
+	// 	case 'dashboard':
+	// 		return <Dashboard display={handleDisplay} />;
+	// 	case 'signup':
+	// 		return <SignUp display={handleDisplay} />;
+	// 	default:
+	// 		return <Login display={handleDisplay} />;
+	// }
+	return <Dashboard display={handleDisplay} />;
 }
 
 export default App;

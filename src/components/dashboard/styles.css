@@ -1,0 +1,14 @@
+
+main {
+	margin-left: 5rem;
+}
+
+nav {
+	background-color: black;
+	width: 5rem;
+  height: 100vh;
+  position: fixed;
+}
+nav img {
+  filter: invert(1);
+}
