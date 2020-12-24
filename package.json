@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.1.0",
+    "axios": "^0.21.1",
     "postcss": "^8.2.1",
     "preact": "^10.1.0",
     "preact-render-to-string": "^5.1.2"

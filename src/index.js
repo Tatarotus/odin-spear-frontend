@@ -1,8 +1,27 @@
+import { useState } from 'preact/hooks';
+
 import Login from './components/Login';
+import Dashboard from './components/Dashboard';
+import SignUp from './components/SignUp';
 import './style';
 
+//TODO - Switch between screens - Login => Dashboard => Login
+
 function App() {
-	return <Login />;
+	const [display, setDisplay] = useState('');
+	function handleDisplay(val) {
+		setDisplay(val);
+	}
+	switch (display) {
+		case 'login':
+			return <Login display={handleDisplay} />;
+		case 'dashboard':
+			return <Dashboard display={handleDisplay} />;
+		case 'signup':
+			return <SignUp display={handleDisplay} />;
+		default:
+			return <Login display={handleDisplay} />;
+	}
 }
 
 export default App;
