@@ -1,14 +1,114 @@
+:root {
+	--text-primary: #b6b6b6;
+	--text-secondary: #ececec;
+	--bg-primary: #23232e;
+	--bg-secondary: #141418;
+	--transition-speed: 600ms;
+}
 
 main {
 	margin-left: 5rem;
 }
 
+body::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: #b6b6b6;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--bg-primary);
+}
+
 nav {
+	display: flex;
 	background-color: black;
 	width: 5rem;
-  height: 100vh;
-  position: fixed;
+	height: 100vh;
+	position: fixed;
+	background-color: var(--bg-primary);
+	transition: width 100ms ease;
 }
+
+nav:hover {
+	width: 12rem;
+}
+
+nav:hover ul li span {
+	display: block;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+nav ul li:first-child {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	font-weight: bold;
+	background-color: var(--bg-secondary);
+	width: 5rem;
+	color: #000;
+	align-self: flex-start;
+	filter: invert(1);
+}
+
+nav ul li:first-child img {
+	transform: rotate(-43deg);
+	transition: transform var(--transition-speed);
+}
+
+nav ul li:first-child:hover img {
+	transform: rotate(-320deg);
+}
+
+nav ul li:first-child:hover {
+	color: #fff;
+	width: 12rem;
+}
+
+nav ul li:first-child:hover img {
+	transform: rotate(-320deg);
+}
+
+nav ul li {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	width: 12rem;
+	color: var(--text-primary);
+	transition: var(--transition-speed);
+}
+
+nav ul li:hover {
+	background-color: var(--bg-secondary);
+}
+nav ul li:hover img {
+	filter: invert(1);
+}
+
+nav ul li img {
+	min-width: 1.8rem;
+	margin: 0 1.5rem;
+}
+
+nav ul li span {
+	display: none;
+	margin-left: 1rem;
+}
+
+nav ul li:last-child {
+	margin-top: auto;
+}
+
 nav img {
-  filter: invert(1);
+	transition: var(--transition-speed);
+	filter: invert(0.6);
 }
