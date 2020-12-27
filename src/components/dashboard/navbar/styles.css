@@ -72,6 +72,7 @@ nav ul li:first-child:hover img {
 nav ul li:first-child:hover {
 	color: #fff;
 	width: 12rem;
+	cursor: no-drop;
 }
 
 nav ul li:first-child:hover img {
@@ -79,6 +80,7 @@ nav ul li:first-child:hover img {
 }
 
 nav ul li {
+	cursor: pointer;
 	display: flex;
 	align-items: center;
 	height: 5rem;
